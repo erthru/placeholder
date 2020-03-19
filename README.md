@@ -27,13 +27,13 @@
 <br />
 <h3>Run On Your Server:</h3>
 <p>
-    1. run git clone https://github.com/erthru/placeholder.git<br />
-    2. run cd placeholder<br />
-    3. run npm install<br />
+    1. run "git clone https://github.com/erthru/placeholder.git"<br />
+    2. run "cd placeholder"<br />
+    3. run "npm install"<br />
     4. create a new database with the name "placeholder"<br />
-    5. setup config/config.json<br />
-    6. run sequelize db:migrate<br />
-    7. run sequelize db:seed:all<br />
-    8. run npm start<br />
-    9. placeholder run on port:3000
+    5. setup "config/config.json"<br />
+    6. run "sequelize db:migrate" ("npm install -g sequelize-cli" if you don't have sequelize installed)<br />
+    7. run "sequelize db:seed:all"<br />
+    8. run "npm start"<br />
+    9. placeholder run on port:1001 (you can change the default port on "bin/www")
 </p>
