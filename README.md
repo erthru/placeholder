@@ -29,7 +29,7 @@
 <p>
     1. run git clone https://github.com/erthru/placeholder.git<br />
     2. run cd placeholder<br />
-    3. run npm run install<br />
+    3. run npm install<br />
     4. create a new database with the name "placeholder"<br />
     5. setup config/config.json<br />
     6. run sequelize db:migrate<br />
