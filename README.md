@@ -1,6 +1,5 @@
 <h2>Placeholder API</h2>
 <hr />
-<br />
 <h3>Routes:</h3>
 <table border="1px solid #000000" width="900px">
     <tr>
@@ -25,10 +24,9 @@
     </tr>
 </table>
 <br />
-<br />
 <h3>Run On Your Server:</h3>
 <p>
-    1. run git clone https://github.com/erthru/placeholder<br />
+    1. run git clone https://github.com/erthru/placeholder.git<br />
     2. run cd placeholder<br />
     3. run npm run install<br />
     4. create a new database with the name "placeholder"<br />
