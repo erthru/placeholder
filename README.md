@@ -25,6 +25,8 @@
     </tr>
 </table>
 <br />
+post with comments example in: https://placeholder.erthru.id/post/1
+<br />
 <h3>Run On Your Server:</h3>
 <p>
     1. run "git clone https://github.com/erthru/placeholder.git"<br />
