@@ -1,5 +1,6 @@
 <h2>Placeholder API</h2>
 <h3>Routes:</h3>
+<span>Base: https://placeholder.erthru.id</span>
 <table border="1px solid #000000" width="900px">
     <tr>
         <th>Endpoint</th>
