@@ -1,5 +1,4 @@
 <h2>Placeholder API</h2>
-<hr />
 <h3>Routes:</h3>
 <table border="1px solid #000000" width="900px">
     <tr>
