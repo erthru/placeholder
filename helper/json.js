@@ -8,7 +8,7 @@ module.exports = {
 
     fail: (res, err) => {
         res.status(500).json({
-            error: 0,
+            error: 1,
             data: {
                 message: err
             }
