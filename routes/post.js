@@ -71,6 +71,7 @@ router.get("/", async (req, res, next) => {
     }
 });
 
+// get one
 router.get("/:id", async (req, res, next) => {
     try{
         const page = req.query.page == null ? 1 : parseInt(req.query.page);

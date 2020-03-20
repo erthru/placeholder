@@ -1,6 +1,8 @@
 <h2>Placeholder API</h2>
 <h3>Routes:</h3>
-<span>Base: https://placeholder.erthru.id</span>
+<span>Base URL: https://placeholder.erthru.id/</span><br />
+<span>Avatar Base URL: https://placeholder.erthru.id/avatar/</span><br />
+<span>Thumbnail Base URL: https://placeholder.erthru.id/thumbnail/</span>
 <br /><br />
 <table border="1px solid #000000" width="900px">
     <tr>
@@ -16,6 +18,11 @@
     <tr>
         <td>/post/{id}</td>
         <td>Showing post detail, comments, author. Comment in pagination (10)</td>
+        <td>page (query), limit (query)</td>
+    </tr>
+    <tr>
+        <td>/author</td>
+        <td>Showing authors. Author in pagination (10)</td>
         <td>page (query), limit (query)</td>
     </tr>
     <tr>
