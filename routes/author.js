@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const json = require("../helper/json");
-const sequelize = require("sequelize");
-const model = require("../models/index");
+const authorRepository = require("../repository/author-repository");
 
 // get all
 router.get("/", async (req, res, next) => {
@@ -11,30 +10,14 @@ router.get("/", async (req, res, next) => {
         const limit = req.query.limit == null ? 10 : parseInt(req.query.limit);
         const offset = (page - 1) * limit;
 
-        const authors = await model.Author.findAll({
-            order: [
-                ["id", "DESC"]
-            ],
-            limit: limit,
-            offset: offset
-        });
-
-        var authorCount = await model.Author.findOne({
-            attributes: [
-                [sequelize.fn("count", "id"), "_total"]
-            ]
-        })
-
-        authorCount = authorCount.dataValues._total;
+        const authors = await authorRepository.getAuthors(limit, offset, req.query.search);
 
         const data = {
-            authors: authors,
+            authors: authors.rows,
             misc: {
-                page: page,
-                limit: limit,
-                authorCount: {
-                    totalItems: authorCount,
-                    totalPages: Math.ceil(authorCount / limit)
+                authors: {
+                    total: authors.total,
+                    pages: Math.ceil(authors.total / limit)
                 }
             }
         };
@@ -52,40 +35,14 @@ router.get("/:id", async (req, res, next) => {
         const limit = req.query.limit == null ? 10 : parseInt(req.query.limit);
         const offset = (page - 1) * limit;
 
-        const author = await model.Author.findByPk(req.params.id, {
-            include: [
-                {
-                    model: model.Post,
-                    order: [
-                        ["id", "DESC"]
-                    ],
-                    limit: limit,
-                    offset: offset
-                }
-            ]
-        });
-
-        var postCount = await model.Author.findByPk(req.params.id, {
-            include: [
-                {
-                    model: model.Post,
-                    attributes: [
-                        [sequelize.fn("count", "id"), "_total"]
-                    ]
-                }
-            ]
-        });
-
-        postCount = postCount.Posts.length != 0 ? postCount.Posts[0].dataValues._total : 0;
+        const author = await authorRepository.getAuthor(req.params.id, limit, offset)
 
         const data = {
-            author: author,
+            author: author.row,
             misc: {
-                page: page,
-                limit: limit,
-                postCount: {
-                    totalItems: postCount,
-                    totalPages: Math.ceil(postCount / limit)
+                authorPosts: {
+                    total: author.postsTotal,
+                    pages: Math.ceil(author.postsTotal / limit)
                 }
             }
         };
