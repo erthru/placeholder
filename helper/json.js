@@ -13,14 +13,5 @@ module.exports = {
                 message: err
             }
         });
-    },
-
-    unauth: (res) => {
-        res.status(401).json({
-            error: 1,
-            data: {
-                message: "unauthorization"
-            }
-        });
     }
 }
