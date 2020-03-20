@@ -23,7 +23,7 @@
     <tr>
         <td>/author</td>
         <td>Showing authors. Author in pagination (10)</td>
-        <td>page (query), limit (query)</td>
+        <td>page (query), limit (query), search(query)</td>
     </tr>
     <tr>
         <td>/author/{id}</td>
