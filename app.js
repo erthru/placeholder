@@ -20,8 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 app.use('/', require('./routes/index'));
-app.use('/author', require('./routes/author'));
-app.use('/post', require('./routes/post'));
+app.use('/authors', require('./routes/authors'));
+app.use('/posts', require('./routes/posts'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

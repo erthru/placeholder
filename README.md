@@ -11,28 +11,28 @@
         <th>Available Query</th>
     </tr>
     <tr>
-        <td>/post</td>
+        <td>/posts</td>
         <td>Showing posts. Post in pagination (10)</td>
         <td>page (query), limit (query), search(query)</td>
     </tr>
     <tr>
-        <td>/post/{id}</td>
+        <td>/posts/{id}</td>
         <td>Showing post detail, comments, author. Comment in pagination (10)</td>
         <td>page (query), limit (query)</td>
     </tr>
     <tr>
-        <td>/author</td>
+        <td>/authors</td>
         <td>Showing authors. Author in pagination (10)</td>
         <td>page (query), limit (query), search(query)</td>
     </tr>
     <tr>
-        <td>/author/{id}</td>
+        <td>/authors/{id}</td>
         <td>Showing author detail, posts. Post in pagination (10)</td>
         <td>page (query), limit (query)</td>
     </tr>
 </table>
 <br />
-post with comments example in: https://placeholder.erthru.id/post/1
+post with comments example in: https://placeholder.erthru.id/posts/1
 <br />
 <h3>Run On Your Server:</h3>
 <p>
