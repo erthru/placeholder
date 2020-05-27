@@ -1,8 +1,8 @@
 <h2>API PLACEHOLDER</h2>
 <h3>Routes:</h3>
-<span>Base URL: https://placeholder.erthru.id/</span><br />
-<span>Avatar Base URL: https://placeholder.erthru.id/avatar/</span><br />
-<span>Thumbnail Base URL: https://placeholder.erthru.id/thumbnail/</span>
+<span>Base URL: http://localhost:1001/</span><br />
+<span>Avatar Base URL: http://localhost:1001/avatar/</span><br />
+<span>Thumbnail Base URL: http://localhost:1001/thumbnail/</span>
 <br /><br />
 <table border="1px solid #000000" width="900px">
     <tr>
@@ -32,7 +32,7 @@
     </tr>
 </table>
 <br />
-post with comments example in: https://placeholder.erthru.id/posts/1
+post with comments example in: http://localhost:1001/posts/1
 <br />
 <h3>Run On Your Server:</h3>
 <p>
